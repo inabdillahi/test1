@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+<h1>Administration</h1>
+<br>
+<a href="{{path('home')}}" class="btn btn-primary">page d'accueil</a>
+<br>
+
+<div class="card">
+    <div class="card-header">Enregister</div>
+    <div class="card-body">
+        {{form_start(form)}}
+        {{form_widget(form)}}
+        <input type="submit" class="btn btn-secondary">
+        {{form_end(form)}}
+
+    </div>
+</div>
+{% endblock %}

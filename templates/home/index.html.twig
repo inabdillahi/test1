@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<h1>La page d'accueil</h1>
+<br>
+<a href="{{path('admin')}}" class="btn btn-primary">Admin</a>
+
+<div class="row">
+    {% if images %}
+    {% for image in images %}
+    <div class="col-12 col-md-3">
+        <img src="{{asset('assets/images/'~ image.image)}}" width="150px" alt="image" srcset="">
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}
